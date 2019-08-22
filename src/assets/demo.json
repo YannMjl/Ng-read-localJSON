@@ -1,0 +1,52 @@
+[
+    {
+        "Name": "Paul Pogba",
+        "club": "Machester United",
+        "image": "assets/pogba.jpg"
+    },
+    {
+        "Name": "Luka Modrić",
+        "club": "Real Madrid",
+        "image": "assets/modric.jpg"
+    },
+    {
+        "Name": "Andres Iniesta",
+        "club": "Vissel Kobe",
+        "image": "assets/iniesta.jpg"
+    },
+    {
+        "Name": "N'golo Kante",
+        "club": "Chelsea F.C",
+        "image": "assets/kante.jpg"
+    },
+    {
+        "Name": "Mesut Ozil",
+        "club": "Arsenal F.C",
+        "image": "assets/ozil.jpg"
+    },
+    {
+        "Name": "Dele Ali",
+        "club": "Tottenham Hotspur F.C",
+        "image": "assets/dele.jpg"
+    },
+    {
+        "Name": "Yaya Touré",
+        "club": "Qingdao Huanghai F.C",
+        "image": "assets/toure.jpg"
+    },
+    {
+        "Name": "Arjen Robben",
+        "club": "FC Bayern Munich",
+        "image": "assets/roben.jpg"
+    },
+    {
+        "Name": "Steven Gerrard",
+        "club": "Liverpool F.C",
+        "image": "assets/gerrard.jpg"
+    },
+    {
+        "Name": "Christian Ericksen",
+        "club": "Tottenham Hotspur F.C",
+        "image": "assets/eriksen.jpg"
+    }
+]
