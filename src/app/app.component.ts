@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import demodata from '../assets/demo.json';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'read-json-demo';
+
+  data: any = demodata;
 }

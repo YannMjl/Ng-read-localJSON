@@ -71,6 +71,12 @@
     <!-- Resources -->
     <h1>Resources</h1>
     <p>Here are some links to help you get started:</p>
+
+    <ul>
+      <li *ngFor="let users of Users">
+        <h2>{{users.Name}}</h2>
+      </li>
+    </ul>
     
   
   </div>
