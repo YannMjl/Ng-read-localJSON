@@ -9,5 +9,5 @@ import demodata from '../assets/demo.json';
 export class AppComponent {
   title = 'read-json-demo';
 
-  data: any = demodata;
+  Players: any = demodata;
 }

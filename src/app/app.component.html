@@ -8,7 +8,7 @@
   />
   <span>Welcome</span>
     <div class="spacer"></div>
-  <a aria-label="Angular on twitter" href="https://twitter.com/angular" title="Twitter">
+  <a aria-label="Angular on twitter" href="https://twitter.com/YannMjl" target="blank" title="Twitter">
     
     <svg id="twitter-logo" height="24" data-name="Logo — FIXED" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
       <defs>
@@ -25,8 +25,7 @@
       <rect class="cls-1" width="400" height="400" />
       <path class="cls-2" d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23"
       />
-    </svg>
-    
+    </svg> 
   </a>
 </div>
 
@@ -50,7 +49,7 @@
     </g>
   </svg>
 
-  <span>{{ title }} app is running!</span>
+  <h4>{{ title }} app is running!</h4>
 
   <svg id="rocket-smoke" alt="Rocket Ship Smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632"
     viewBox="0 0 516.119 1083.632">
@@ -62,28 +61,172 @@
 </div>
 
 
-<div class="content" role="main">
+<div class="content" role="main" style="max-width: 100% !important">
 
   
 
-  <div class="content">
-    
-    <!-- Resources -->
-    <h1>Resources</h1>
-    <p>Here are some links to help you get started:</p>
+  <div class="jumbotron text-center p-4" style="background-color: transparent;">
 
-    <ul>
-      <li *ngFor="let users of Users">
-        <h2>{{users.Name}}</h2>
-      </li>
-    </ul>
+
+    <!-- Grid row -->
+    <div class="row">
     
+      <!-- Grid column -->
+      <div class="col-md-6 offset-md-1 mx-1 my-1">
+    
+        <h4 class="h4 mb-4">My Favorite Premier League Midfielders</h4>
+        
+        <mdb-carousel class="carousel slide carousel-fade w-100 h-25" [animation]="'fade'">
+          <mdb-carousel-item *ngFor="let player of Players">
+            <div class="view w-100">
+              <img class="d-block w-100" src="{{player.image}}" alt="First slide">
+              <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+            </div>
+            <div class="carousel-caption">
+              <h3 class="h3-responsive">{{player.Name}}</h3>
+              <p>{{player.club}}</p>
+            </div>
+          </mdb-carousel-item>
+        </mdb-carousel>
   
+      </div>
+      <!-- Grid column -->
+    
+      <!-- Grid column -->
+      <div class="col-md-5 text-md-left ml-3 mt-3">
+    
+        <!-- Resources -->
+        <h1>My Teams</h1>
+    
+        <!-- Grid row -->
+        <div class="row">
+        
+          <!-- Grid column -->
+          <div class="col-md-12 mb-3">
+        
+            <img src="assets/6.jpg" class="img-fluid z-depth-1"
+              alt="Responsive image">
+        
+          </div>
+          <!-- Grid column -->
+        
+        </div>
+        <!-- Grid row -->
+        
+        
+        <!-- Grid row -->
+        <div class="row">
+        
+          <!-- Grid column -->
+          <div class="col-md-6 mb-3">
+        
+            <img src="assets/4.jpg" class="img-fluid z-depth-1"
+              alt="Responsive image">
+        
+          </div>
+          <!-- Grid column -->
+        
+          <!-- Grid column -->
+          <div class="col-md-6 mb-3">
+        
+            <img src="assets/5.jpg" class="img-fluid z-depth-1"
+              alt="Responsive image">
+        
+          </div>
+          <!-- Grid column -->
+        
+        </div>
+        <!-- Grid row -->
+    
+      </div>
+      <!-- Grid column -->
+    
+    </div>
+    <!-- Grid row -->
+
+
+    <!-- Grid row -->
+    <div class="row">
+    
+      <!-- Grid column -->
+      <div class="col-lg-4 col-md-12 mb-3">
+    
+        <img src="assets/2.jpg" class="img-fluid z-depth-1"
+          alt="Responsive image">
+    
+      </div>
+      <!-- Grid column -->
+    
+      <!-- Grid column -->
+      <div class="col-lg-4 col-md-6 mb-3">
+    
+        <img src="assets/1.jpg" class="img-fluid z-depth-1"
+          alt="Responsive image">
+    
+      </div>
+      <!-- Grid column -->
+    
+      <!-- Grid column -->
+      <div class="col-lg-4 col-md-6 mb-3">
+    
+        <img src="assets/7.jpg" class="img-fluid z-depth-1"
+          alt="Responsive image">
+    
+      </div>
+      <!-- Grid column -->
+    
+    </div>
+    <!-- Grid row -->
+
+
   </div>
-
   
-
 </div>
 
+<!-- footer -->
 
+<div class="grey heavy-rain-gradient">
+  <div class="container">
+
+    <!-- Grid row-->
+    <div class="row py-4 d-flex align-items-center">
+
+      <!-- Grid column -->
+      <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+
+        <h6 class="mb-0 text-muted">Get connected with me on social networks!</h6>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+        <!-- Facebook -->
+        <a class="fb-ic" style="font-size: 1.25rem;" href="https://www.facebook.com/yann.mjl"
+          target="blank">
+          <i class="fab fa-facebook-f fa-2x blue-text mr-4"> </i>
+        </a>
+        <!-- Twitter -->
+        <a class="tw-ic" style="font-size: 1.25rem;" href="https://twitter.com/YannMjl" target="blank">
+          <i class="fab fa-twitter fa-2x text-info mr-4"> </i>
+        </a>
+        <!--Linkedin -->
+        <a class="li-ic" style="font-size: 1.25rem;" href="https://www.linkedin.com/in/yannmjl/"
+          target="blank">
+          <i class="fab fa-linkedin fa-2x blue-text mr-4"> </i>
+        </a>
+        <!--Instagram-->
+        <a class="ins-ic" style="font-size: 1.25rem;" href="https://www.instagram.com/yannmjl/" target="blank">
+          <i class="fab fa-instagram fa-2x pink-text"> </i>
+        </a>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+
+  </div>
+</div>
 
