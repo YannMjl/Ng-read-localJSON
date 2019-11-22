@@ -68,115 +68,25 @@
   <div class="jumbotron text-center p-4" style="background-color: transparent;">
 
 
-    <!-- Grid row -->
-    <div class="row">
+    <div class="col-md-12 mb-4">
     
-      <!-- Grid column -->
-      <div class="col-md-6 offset-md-1 mx-1 my-1">
-    
-        <h4 class="h4 mb-4">My Favorite Premier League Midfielders</h4>
+        <!--Card-->
+        <mdb-card>
         
-        <mdb-carousel class="carousel slide carousel-fade w-100 h-25" [animation]="'fade'">
-          <mdb-carousel-item *ngFor="let player of Players">
-            <div class="view w-100">
-              <img class="d-block w-100" src="{{player.image}}" alt="First slide">
-              <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
-            </div>
-            <div class="carousel-caption">
-              <h3 class="h3-responsive">{{player.Name}}</h3>
-              <p>{{player.club}}</p>
-            </div>
-          </mdb-carousel-item>
-        </mdb-carousel>
-  
-      </div>
-      <!-- Grid column -->
-    
-      <!-- Grid column -->
-      <div class="col-md-5 text-md-left ml-3 mt-3">
-    
-        <!-- Resources -->
-        <h1>My Teams</h1>
-    
-        <!-- Grid row -->
-        <div class="row">
+            <!--Card content-->
+            <mdb-card-body>
         
-          <!-- Grid column -->
-          <div class="col-md-12 mb-3">
+                <div style="display: block">
+                    <canvas mdbChart [chartType]="chart1Type" [datasets]="chartDatasets" [labels]="chartLabels"
+                    [colors]="chartColors" [options]="chartOptions" [legend]="true">
+                    </canvas>
+                </div>
+            </mdb-card-body>
         
-            <img src="assets/6.jpg" class="img-fluid z-depth-1"
-              alt="Responsive image">
-        
-          </div>
-          <!-- Grid column -->
-        
-        </div>
-        <!-- Grid row -->
-        
-        
-        <!-- Grid row -->
-        <div class="row">
-        
-          <!-- Grid column -->
-          <div class="col-md-6 mb-3">
-        
-            <img src="assets/4.jpg" class="img-fluid z-depth-1"
-              alt="Responsive image">
-        
-          </div>
-          <!-- Grid column -->
-        
-          <!-- Grid column -->
-          <div class="col-md-6 mb-3">
-        
-            <img src="assets/5.jpg" class="img-fluid z-depth-1"
-              alt="Responsive image">
-        
-          </div>
-          <!-- Grid column -->
-        
-        </div>
-        <!-- Grid row -->
-    
-      </div>
-      <!-- Grid column -->
+        </mdb-card>
+        <!--/.Card-->
     
     </div>
-    <!-- Grid row -->
-
-
-    <!-- Grid row -->
-    <div class="row">
-    
-      <!-- Grid column -->
-      <div class="col-lg-4 col-md-12 mb-3">
-    
-        <img src="assets/2.jpg" class="img-fluid z-depth-1"
-          alt="Responsive image">
-    
-      </div>
-      <!-- Grid column -->
-    
-      <!-- Grid column -->
-      <div class="col-lg-4 col-md-6 mb-3">
-    
-        <img src="assets/1.jpg" class="img-fluid z-depth-1"
-          alt="Responsive image">
-    
-      </div>
-      <!-- Grid column -->
-    
-      <!-- Grid column -->
-      <div class="col-lg-4 col-md-6 mb-3">
-    
-        <img src="assets/7.jpg" class="img-fluid z-depth-1"
-          alt="Responsive image">
-    
-      </div>
-      <!-- Grid column -->
-    
-    </div>
-    <!-- Grid row -->
 
 
   </div>

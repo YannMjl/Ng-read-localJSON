@@ -4,10 +4,16 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 import { AppComponent } from './app.component';
+import { OrderByPipe } from './shared/orderBy.pipe';
+import { FileSizePipe } from './shared/size.pipe';
+import { CapitalizePipe } from './shared/capitalize.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OrderByPipe,
+    FileSizePipe,
+    CapitalizePipe
   ],
   imports: [
     BrowserModule,
