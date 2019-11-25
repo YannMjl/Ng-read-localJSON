@@ -65,33 +65,64 @@
 
   
 
-  <div class="jumbotron text-center p-4" style="background-color: transparent;">
+    <div class="jumbotron text-center p-4" style="background-color: transparent;">
 
+        <div class="row col-md-12">
 
-    <div class="col-md-12 mb-4">
-    
-        <!--Card-->
-        <mdb-card>
-        
-            <!--Card content-->
-            <mdb-card-body>
-        
-                <div style="display: block">
-                    <canvas mdbChart [chartType]="chart1Type" [datasets]="chartDatasets" [labels]="chartLabels"
-                    [colors]="chartColors" [options]="chartOptions" [legend]="true">
-                    </canvas>
+            <div class="col-md-8 mx-3 my-3">
+            
+                <!--Card-->
+                <mdb-card>
+            
+                    <!--Card content-->
+                    <mdb-card-body>
+            
+                        <div style="display: block">
+                            <canvas mdbChart [chartType]="chart1Type" 
+                                [datasets]="chartDatasets" 
+                                [labels]="chartLabels"
+                                [colors]="chartColors" 
+                                [options]="chartOptions" 
+                                [legend]="true">
+                            </canvas>
+                        </div>
+                    </mdb-card-body>
+            
+                </mdb-card>
+                <!--/.Card-->
+            
+            </div>
+
+            <div class="col-md-3 mx-3 my-3">
+            
+                <div class="form-org">
+            
+                    <form>
+                        <fieldset>
+                            <legend>
+                                <span class="number">
+                                    1
+                                </span>
+                                Names
+                            </legend>
+                            <br>
+                            <input type="text" name="search" placeholder="Search...">
+                        </fieldset>
+            
+            
+                    </form>
+            
                 </div>
-            </mdb-card-body>
-        
-        </mdb-card>
-        <!--/.Card-->
-    
+
+        </div>
+
     </div>
-
-
-  </div>
   
 </div>
+
+
+
+
 
 <!-- footer -->
 
