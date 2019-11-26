@@ -65,14 +65,14 @@
 
   
 
-    <div class="jumbotron text-center p-4" style="background-color: transparent;">
+    <div class="jumbotron text-center p-4 w-100" style="background-color: transparent;">
 
         <div class="row col-md-12">
 
             <div class="col-md-8 mx-3 my-3">
             
                 <!--Card-->
-                <mdb-card>
+                <mdb-card class="w-100">
             
                     <!--Card content-->
                     <mdb-card-body>
@@ -93,7 +93,7 @@
             
             </div>
 
-            <div class="col-md-3 mx-3 my-3">
+            <div class="col-md-3 mx-3 w-100">
             
                 <div class="form-org">
             
@@ -101,13 +101,19 @@
                         <fieldset>
                             <legend>
                                 <span class="number">
-                                    1
+                                    <i class="far fa-futbol fa-log"></i>
                                 </span>
-                                Names
+                                Player Names
                             </legend>
                             <br>
-                            <input type="text" name="search" placeholder="Search...">
+                            <input type="text" name="search" placeholder="Search..." [(ngModel)]="text">
                         </fieldset>
+
+                        <ul class="list-org">
+                          <li class="mx-2" *ngFor="let name of Names | filter : text">
+                            {{name}}
+                          </li>
+                        </ul>
             
             
                     </form>

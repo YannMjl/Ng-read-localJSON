@@ -357,3 +357,52 @@ input[type=text]:focus {
 }
 
 /********************************************************************************************/
+/* CSS style that display the list of organization in a fashiion way                        */
+/********************************************************************************************/
+.list-org .text {
+    top: -3px;
+    position: relative;
+}
+
+.list-org {
+    width: 100%;
+    padding: 5px;
+    margin: 40px auto;
+    list-style-type: none;
+}
+
+.list-org li:hover {
+    left: .1em;
+    color: black;
+    background-color: #70b5e9;
+}
+
+.list-org li {
+    left: 0;
+    margin: .5em;
+    padding: .3em;
+    height: 1.6em;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: large;
+    border-radius: 4px;
+    position: relative;
+    color: wheat;
+}
+
+.org-list {
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  color: white;
+  line-height: 1em;
+  font-size: small;
+  position: relative;
+  margin-right: .8em;
+  display: inline-block;
+  border-radius: 4px 0 0 4px;
+  background-color: #607D8B;
+  padding: 0.8em 0.7em 0 0.7em;
+}
+
+/********************************************************************************************/
