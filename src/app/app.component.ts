@@ -5,7 +5,8 @@ import { FileSizePipe } from './shared/size.pipe';
 import { CapitalizePipe } from './shared/capitalize.pipe';
 import { OrderByPipe } from './shared/orderBy.pipe.js';
 import { FilterPipe } from './shared/filter.pipe.js';
-import { MycurrencyPipe } from './shared/mycurrency.pipe.js';
+import { CustomCurrencyPipe } from './shared/mycurrency.pipe.js';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
     selector: 'app-root',
@@ -15,7 +16,9 @@ import { MycurrencyPipe } from './shared/mycurrency.pipe.js';
         FileSizePipe,
         CapitalizePipe,
         OrderByPipe,
-        FilterPipe
+        FilterPipe,
+        CurrencyPipe,
+        CustomCurrencyPipe
     ]
 })
 export class AppComponent implements OnInit {
@@ -37,29 +40,28 @@ export class AppComponent implements OnInit {
         'Mohamed Salah'
     ];
 
-    // public map: any = { lat: 51.678418, lng: 7.809007 };
     public chart1Type = 'bar';
     public chartType = 'line';
 
-    public chartDatasets: Array<any>;
 
-    public chartLabels: Array<any> = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'];
-
-    public chartColors: Array<any> = [
-
+    public chartLabels: Array<any> = [
+        'Monday', 'Tuesday', 'Wenesday',
+        'Thursday', 'Friday', 'Saturday', 'Sunday'
     ];
 
+    public chartDatasets: Array<any>;
+    public chartColors: Array<any> = [];
     public dateOptionsSelect: any[];
     public bulkOptionsSelect: any[];
     public showOnlyOptionsSelect: any[];
     public filterOptionsSelect: any[];
-
     public chartOptions: any;
 
     constructor(
         private capitalize: CapitalizePipe,
         private datasize: FileSizePipe,
-        // private curency: MycurrencyPipe
+        private mycurency: CustomCurrencyPipe,
+        private currency: CurrencyPipe
     ) {}
 
     ngOnInit() {
@@ -67,15 +69,34 @@ export class AppComponent implements OnInit {
         // let use capitlaize pipe on the title
         this.title = this.capitalize.transform(this.title);
 
-        // // tslint:disable-next-line: forin
-        // for (let value in this.data1) {
+        const firstChartData = [
+            Math.floor(Math.random() * 20),
+            Math.floor(Math.random() * 20),
+            Math.floor(Math.random() * 20),
+            Math.floor(Math.random() * 20),
+            Math.floor(Math.random() * 20),
+            Math.floor(Math.random() * 20),
+            Math.floor(Math.random() * 20),
+        ];
+        const secondChartData = [
+            Math.floor(Math.random() * 20),
+            Math.floor(Math.random() * 20),
+            Math.floor(Math.random() * 20),
+            Math.floor(Math.random() * 20),
+            Math.floor(Math.random() * 20),
+            Math.floor(Math.random() * 20),
+            Math.floor(Math.random() * 20),
+        ];
 
-        //     let new_value = this.data1[value];
-        //     new_value =
-        //     new_value = this.datasize.transform(new_value)
-
-        //     console.log(new_value);  // output: Apple Orange Banana
-        // }
+        const thirdChartData = [
+            Math.floor(Math.random() * 20),
+            Math.floor(Math.random() * 20),
+            Math.floor(Math.random() * 20),
+            Math.floor(Math.random() * 20),
+            Math.floor(Math.random() * 20),
+            Math.floor(Math.random() * 20),
+            Math.floor(Math.random() * 20),
+        ];
 
 
         this.chartOptions = {
@@ -93,12 +114,13 @@ export class AppComponent implements OnInit {
                         // tslint:disable-next-line: object-literal-shorthand
                         // tslint:disable-next-line: only-arrow-functions
                         userCallback(tick) {
-                            return tick.toString() + 'dB';
-                            // return this.curency.transform(tick);
+                            //  Formatting Y Axis with both Currency and Thousands Separator
+                            // return tick.toString() + 'dB';
+                            return '$' + tick.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                         }
                     },
                     scaleLabel: {
-                        labelString: 'Amount of Money',
+                        labelString: 'Lunch Money',
                         display: true,
                     }
                 }],
@@ -107,7 +129,7 @@ export class AppComponent implements OnInit {
                         fontColor: '#5b5f62',
                     },
                     scaleLabel: {
-                        labelString: 'Month',
+                        labelString: 'Day of the Week',
                         display: true,
                     }
                 }]
@@ -117,11 +139,17 @@ export class AppComponent implements OnInit {
 
         this.chartDatasets = [
             {
-                data: [50, 40, 60, 51, 56, 55, 40],
+                data: firstChartData,
                 label: 'Yann'
             },
-            { data: [28, 80, 40, 69, 36, 37, 110], label: 'Maria' },
-            { data: [38, 58, 30, 90, 45, 65, 30], label: 'Gaby' }
+            {
+                data: secondChartData,
+                label: 'Maria'
+            },
+            {
+                data: thirdChartData,
+                label: 'Gaby'
+            }
         ];
 
     }

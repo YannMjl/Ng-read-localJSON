@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { OrderByPipe } from './shared/orderBy.pipe';
 import { FileSizePipe } from './shared/size.pipe';
 import { CapitalizePipe } from './shared/capitalize.pipe';
-import { MycurrencyPipe } from './shared/mycurrency.pipe';
+import { CustomCurrencyPipe } from './shared/mycurrency.pipe';
 import { FilterPipe } from './shared/filter.pipe';
 import { FormsModule } from '@angular/forms';
 
@@ -17,7 +17,7 @@ import { FormsModule } from '@angular/forms';
     OrderByPipe,
     FileSizePipe,
     CapitalizePipe,
-    MycurrencyPipe,
+    CustomCurrencyPipe,
     FilterPipe
   ],
   imports: [

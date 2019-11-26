@@ -1,28 +1,15 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { formatCurrency, getCurrencySymbol } from '@angular/common';
+import { CurrencyPipe } from '@angular/common';
 
-@Pipe({
-    name: 'mycurrency',
-})
-export class MycurrencyPipe implements PipeTransform {
-    transform(
-        value: number,
-        currencyCode: string = 'EUR',
-        display:
-            | 'code'
-            | 'symbol'
-            | 'symbol-narrow'
-            | string
-            | boolean = 'symbol',
-        digitsInfo: string = '3.2-2',
-        locale: string = 'fr',
-    ): string | null {
-        return formatCurrency(
-            value,
-            locale,
-            getCurrencySymbol(currencyCode, 'wide'),
-            currencyCode,
-            digitsInfo,
-        );
+@Pipe({ name: 'CustomeCurrency' })
+export class CustomCurrencyPipe implements PipeTransform {
+
+    constructor(private currencyPipe: CurrencyPipe) { }
+
+    transform(value: any, currency: string, symbol: boolean = false): string {
+        // tslint:disable-next-line: curly
+        if (value != null)
+            return this.currencyPipe.transform(value, currency, symbol);
+        return this.currencyPipe.transform(0, currency, symbol).split('0.00')[0];
     }
 }
