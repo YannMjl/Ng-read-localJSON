@@ -328,7 +328,9 @@ input[type=text]:focus {
   margin: 1rem auto;
   padding: 40px 50px;
   border-radius: 10px;
-  background: url(/assets/bg.jpg);
+  background: url(/assets/p.png), url(/assets/bg.jpg);
+  background-size: auto, auto;
+  background-repeat: no-repeat, no-repeat;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
